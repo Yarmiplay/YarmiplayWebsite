@@ -1,0 +1,28 @@
+name: IndexNow
+
+# Bing, DuckDuckGo, Yandex and others recrawl the site after each Pages build, without a webmaster account.
+on:
+  page_build:
+  workflow_dispatch:
+
+permissions: {}
+
+env:
+  # Not a secret: IndexNow checks it against the <key>.txt the site publishes.
+  INDEXNOW_KEY: 3f002bbb6c8b56f9f1628ecec0258c30
+  SITE: https://yarmiplay.com
+
+jobs:
+  notify:
+    if: github.event_name == 'workflow_dispatch' || github.event.build.status == 'built'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Notify IndexNow
+        run: |
+          body=$(printf '{"host":"yarmiplay.com","key":"%s","keyLocation":"%s/%s.txt","urlList":["%s/"]}' \
+            "$INDEXNOW_KEY" "$SITE" "$INDEXNOW_KEY" "$SITE")
+          code=$(curl -s -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' -d "$body" || true)
+          echo "IndexNow answered HTTP $code"; cat response.txt 2>/dev/null || true
+          case "$code" in 200|202) ;; *) echo "::warning::IndexNow answered HTTP $code" ;; esac
