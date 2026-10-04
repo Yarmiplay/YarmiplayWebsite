@@ -126,6 +126,10 @@ h2 {
 
 .card-icon img { width: 36px; height: 36px; object-fit: contain; }
 
+.card-icon.app { background: none; }
+
+.card-icon.app img { width: 100%; height: 100%; }
+
 .card-icon.snake { color: var(--snake); background: rgba(91, 211, 107, 0.12); }
 
 .card:has(.card-icon.snake):hover { border-color: rgba(91, 211, 107, 0.5); }
