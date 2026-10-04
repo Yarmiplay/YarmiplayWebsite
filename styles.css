@@ -144,6 +144,8 @@ h2 {
 
 .card-icon svg { width: 26px; height: 26px; }
 
+.card-icon img { width: 40px; height: 40px; object-fit: contain; }
+
 .card-icon.snake { color: var(--snake); background: rgba(91, 211, 107, 0.12); }
 
 .card:has(.card-icon.snake):hover { border-color: rgba(91, 211, 107, 0.5); }
@@ -151,25 +153,6 @@ h2 {
 .card h3 { margin: 0 0 8px; font-size: 1.25rem; }
 
 .card p { margin: 0 0 16px; color: var(--muted); }
-
-.tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
-}
-
-.tags li {
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--snake);
-  background: rgba(91, 211, 107, 0.1);
-  border: 1px solid rgba(91, 211, 107, 0.3);
-}
 
 .card-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
 
