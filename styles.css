@@ -136,6 +136,19 @@ h2 {
 
 .card h3 { margin: 0; font-size: 1.2rem; }
 
+.card-source {
+  margin-left: auto;
+  display: inline-flex;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.card-source:hover { color: var(--text); }
+
+.card-source svg { width: 22px; height: 22px; }
+
 .card p { margin: 0 0 14px; color: var(--muted); }
 
 .card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
@@ -161,10 +174,6 @@ h2 {
 }
 
 .btn.primary:hover { transform: translateY(-1px); filter: brightness(1.1); }
-
-.btn.icon { padding: 9px 11px; }
-
-.btn.icon svg { width: 20px; height: 20px; }
 
 .btn.disabled { opacity: 0.45; cursor: not-allowed; }
 
