@@ -195,14 +195,14 @@
 
       var names = { android: "Android", ios: "iPhone and iPad", windows: "Windows", macos: "macOS", linux: "Linux" };
       var apps = {
-        tv: { site: "https://tv.yarmiplay.com/", android: "YarmiplayTV.apk", windows: "YarmiplayTV.msi", macos: "YarmiplayTV.dmg", linux: "YarmiplayTV.deb" },
+        tv: { site: "https://tv.yarmiplay.com/", android: "YarmiplayTV.apk", windows: "https://apps.microsoft.com/detail/9PDBVR6W069J", macos: "YarmiplayTV.dmg", linux: "YarmiplayTV.deb" },
         servertv: { site: "https://servertv.yarmiplay.com/", windows: "YarmiplayServerTV.msi", macos: "YarmiplayServerTV.dmg", linux: "YarmiplayServerTV.deb" }
       };
 
       document.querySelectorAll("[data-download]").forEach(function (link) {
         var app = apps[link.getAttribute("data-download")], file = app[os];
         if (file) {
-          link.href = app.site + file;
+          link.href = new URL(file, app.site).href;
           link.textContent = "Download for " + names[os];
           return;
         }
