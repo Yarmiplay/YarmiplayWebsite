@@ -8,6 +8,10 @@
   --accent: #8b7bff;
   --accent-2: #3dd6c6;
   --snake: #5bd36b;
+  --brand-gradient: linear-gradient(90deg, #be99e0, #ea83ff);
+  --tv-gradient: linear-gradient(90deg, #1b2a41, #2373bd);
+  --gplay-gradient: linear-gradient(90deg, #185abc, #146c2e);
+  --details-gradient: linear-gradient(90deg, #2a2340, #8e6fd1);
   --radius: 16px;
 }
 
@@ -52,13 +56,14 @@ a { color: inherit; }
 h1 {
   margin: 0;
   font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-family: "Fredoka", system-ui, sans-serif;
   line-height: 1;
-  letter-spacing: -0.03em;
-  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-weight: 600;
 }
 
 .accent {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  background: var(--brand-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -169,19 +174,31 @@ h2 {
 
 .btn.primary {
   border-color: transparent;
-  background: linear-gradient(90deg, var(--accent), #6f8bff);
+  background: var(--tv-gradient) border-box;
   color: #fff;
 }
 
-.btn.primary:hover { transform: translateY(-1px); filter: brightness(1.1); }
+.btn.gplay {
+  border-color: transparent;
+  background: var(--gplay-gradient) border-box;
+  color: #fff;
+}
+
+.btn.details {
+  border-color: transparent;
+  background: var(--details-gradient) border-box;
+  color: #fff;
+}
+
+.btn.primary:hover, .btn.gplay:hover, .btn.details:hover { transform: translateY(-1px); filter: brightness(1.1); }
 
 .btn.disabled { opacity: 0.45; cursor: not-allowed; }
 
 .btn.disabled:hover { border-color: var(--border); }
 
 .card:has(.card-icon.snake) .btn.primary {
-  background: linear-gradient(90deg, #3fb950, var(--snake));
-  color: #08130a;
+  background: linear-gradient(90deg, #17602f, #2a8c41) border-box;
+  color: #fff;
 }
 
 a:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
@@ -234,5 +251,5 @@ a:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .card, .btn { transition: none; }
-  .card:hover, .btn.primary:hover { transform: none; }
+  .card:hover, .btn.primary:hover, .btn.gplay:hover, .btn.details:hover { transform: none; }
 }
