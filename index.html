@@ -74,80 +74,142 @@
 <body>
   <div class="glow" aria-hidden="true"></div>
 
-  <header class="hero">
-    <div class="wrap">
-      <h1>Yarmi<span class="accent">play</span></h1>
-      <p class="lead">Creator of Pudding Mod and Remix Mod for Google Snake. Inspired dice count for Google Snake which has been officially added to the game. Also the creator of YarmiplayTV, a syncplay client that integrates with media servers.</p>
-    </div>
-  </header>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="/" aria-label="Yarmiplay home"><img src="/favicon.svg" alt="" width="34" height="34"><span>Yarmi<span class="accent">play</span></span></a>
+      <nav aria-label="Sections">
+        <a href="#tv">TV apps</a>
+        <a href="#snake">Google Snake</a>
+        <a href="https://github.com/Yarmiplay" rel="me noopener">GitHub</a>
+      </nav>
+    </header>
+  </div>
 
   <main class="wrap">
-    <section id="tv" aria-labelledby="tv-title">
-      <h2 id="tv-title">TV projects</h2>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Watch-together apps &middot; Google Snake mods</p>
+        <h1>Yarmi<span class="accent">play</span></h1>
+        <p class="lead">Creator of <strong>Pudding Mod</strong> and <strong>Remix Mod</strong> for Google Snake. Inspired dice count for Google Snake which has been officially added to the game. Also the creator of <strong>YarmiplayTV</strong>, a Syncplay client that integrates with media servers.</p>
+        <div class="cta">
+          <a class="btn primary big" href="#tv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12zm-5-6-7 4V7z"/></svg><span>Watch together<small>YarmiplayTV and YarmiplayServerTV</small></span></a>
+          <a class="btn ghost big" href="#snake"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg><span>Google Snake<small>Mods and speedrun stats</small></span></a>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <img class="art-logo" src="/favicon.svg" alt="" width="168" height="168">
+        <span class="orbit app"><img src="/images/yarmiplaytv.svg" alt=""></span>
+        <span class="orbit"><img src="/images/pudding.png" alt=""></span>
+        <span class="orbit app"><img src="/images/yarmiplayservertv.svg" alt=""></span>
+        <span class="orbit"><img src="/images/bunny.png" alt=""></span>
+        <span class="orbit"><img src="/images/darksnakegang.png" alt=""></span>
+      </div>
+    </section>
+
+    <section id="tv" class="section tv" aria-labelledby="tv-title">
+      <div class="section-head">
+        <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg></span>
+        <h2 id="tv-title">TV projects</h2>
+      </div>
       <p class="section-lead">Watch together in sync, wherever your friends are.</p>
       <div class="grid">
-        <article class="card">
+        <article class="card featured">
           <div class="card-head">
             <div class="card-icon app" aria-hidden="true">
-              <img src="/images/yarmiplaytv.svg" alt="" width="44" height="44">
+              <img src="/images/yarmiplaytv.svg" alt="" width="52" height="52">
             </div>
-            <h3>YarmiplayTV</h3>
+            <div>
+              <h3>YarmiplayTV</h3>
+              <a class="card-site" href="https://tv.yarmiplay.com/">tv.yarmiplay.com</a>
+            </div>
             <a class="card-source" href="https://github.com/Yarmiplay/YarmiplayTV" aria-label="Source on GitHub" title="Source on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
           </div>
           <p>A Syncplay client for Google TV, Android phones and tablets, and desktop. mpv built in, plays from Jellyfin, Plex or local files, with rooms and chat.</p>
+          <ul class="chips" aria-label="Runs on">
+            <li>Google TV</li><li>Android</li><li>Windows</li><li>macOS</li><li>Linux</li><li>Web browser</li>
+          </ul>
           <div class="card-actions">
-            <a class="btn primary" href="https://tv.yarmiplay.com/" data-download="tv">Download</a>
-            <a class="btn gplay" href="https://tv.yarmiplay.com/test/" title="Become a tester on Google Play">Google Play</a>
-            <a class="btn details" href="https://tv.yarmiplay.com/">Details</a>
+            <a class="btn primary" href="https://tv.yarmiplay.com/#download" data-download="tv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg><span><b>Download</b><small>Google TV, Android, Windows, macOS, Linux</small></span></a>
+            <a class="btn" href="https://tv.yarmiplay.com/test/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Google Play<small>Join the test</small></span></a>
+            <a class="btn" href="https://tv.yarmiplay.com/watch/" data-watch><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.99 7.99 0 0 1 5.08 16zm2.95-8H5.08a7.99 7.99 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg><span>Watch in your browser<small>Nothing to install</small></span></a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-head">
             <div class="card-icon app" aria-hidden="true">
-              <img src="/images/yarmiplayservertv.svg" alt="" width="44" height="44">
+              <img src="/images/yarmiplayservertv.svg" alt="" width="52" height="52">
             </div>
-            <h3>YarmiplayServerTV</h3>
+            <div>
+              <h3>YarmiplayServerTV</h3>
+              <a class="card-site" href="https://servertv.yarmiplay.com/">servertv.yarmiplay.com</a>
+            </div>
             <a class="card-source" href="https://github.com/Yarmiplay/YarmiplayServerTV" aria-label="Source on GitHub" title="Source on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
           </div>
           <p>Host a Syncplay server and a Jellyfin server from your desktop tray on Windows, macOS or Linux, ready for YarmiplayTV to connect to.</p>
+          <ul class="chips" aria-label="Runs on">
+            <li>Windows</li><li>macOS</li><li>Linux</li>
+          </ul>
           <div class="card-actions">
-            <a class="btn primary" href="https://servertv.yarmiplay.com/" data-download="servertv">Download</a>
-            <a class="btn details" href="https://servertv.yarmiplay.com/">Details</a>
+            <a class="btn primary" href="https://servertv.yarmiplay.com/" data-download="servertv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg><span><b>Download</b><small>Windows, macOS, Linux</small></span></a>
+            <a class="more" href="https://servertv.yarmiplay.com/">Details <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="snake" aria-labelledby="snake-title">
-      <h2 id="snake-title">Google Snake</h2>
+    <section id="snake" class="section snake" aria-labelledby="snake-title">
+      <div class="section-head">
+        <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></span>
+        <h2 id="snake-title">Google Snake</h2>
+      </div>
       <p class="section-lead">I'm part of <strong>DarkSnakeGang</strong>, the modding group behind the popular Google Snake mods.</p>
-      <div class="grid">
+      <div class="highlights">
+        <a class="highlight" href="https://googlesnakemods.com/v/current">
+          <span class="card-icon" aria-hidden="true"><img src="/images/pudding.png" alt=""></span>
+          <div><b>Pudding Mod</b><span>Created it</span></div>
+        </a>
+        <a class="highlight" href="https://googlesnakemods.com/v/current">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10.59 9.17 5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg></span>
+          <div><b>Remix Mod</b><span>Created it</span></div>
+        </a>
+        <div class="highlight">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7.5 18c-.83 0-1.5-.67-1.5-1.5S6.67 15 7.5 15s1.5.67 1.5 1.5S8.33 18 7.5 18zm0-9C6.67 9 6 8.33 6 7.5S6.67 6 7.5 6 9 6.67 9 7.5 8.33 9 7.5 9zm4.5 4.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5 4.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm0-9c-.83 0-1.5-.67-1.5-1.5S15.67 6 16.5 6s1.5.67 1.5 1.5S17.33 9 16.5 9z"/></svg></span>
+          <div><b>Dice count</b><span>Inspired it, now officially in the game</span></div>
+        </div>
+      </div>
+      <div class="grid even">
         <article class="card">
           <div class="card-head">
-            <div class="card-icon snake" aria-hidden="true">
-              <img src="/images/darksnakegang.png" alt="" width="40" height="40">
+            <div class="card-icon" aria-hidden="true">
+              <img src="/images/darksnakegang.png" alt="" width="36" height="36">
             </div>
-            <h3>GoogleSnakeMods</h3>
+            <div>
+              <h3>GoogleSnakeMods</h3>
+              <a class="card-site" href="https://googlesnakemods.com/">googlesnakemods.com</a>
+            </div>
             <a class="card-source" href="https://github.com/DarkSnakeGang" aria-label="DarkSnakeGang on GitHub" title="DarkSnakeGang on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
           </div>
           <p>Play Google Snake modded without browser extensions.</p>
           <div class="card-actions">
-            <a class="btn primary" href="https://googlesnakemods.com/">GoogleSnakeMods</a>
+            <a class="btn primary" href="https://googlesnakemods.com/v/current"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Play the mods<small>In your browser</small></span></a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-head">
-            <div class="card-icon snake" aria-hidden="true">
-              <img src="/images/bunny.png" alt="" width="40" height="40">
+            <div class="card-icon" aria-hidden="true">
+              <img src="/images/bunny.png" alt="" width="36" height="36">
             </div>
-            <h3>FastSnakeStats</h3>
+            <div>
+              <h3>FastSnakeStats</h3>
+              <a class="card-site" href="https://stats.googlesnakemods.com/">stats.googlesnakemods.com</a>
+            </div>
             <a class="card-source" href="https://github.com/DarkSnakeGang/FastSnakeStats" aria-label="Source on GitHub" title="Source on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
           </div>
           <p>Leaderboard stats for Google Snake speedruns, with data from Speedrun.com for the main game and Category Extensions.</p>
           <div class="card-actions">
-            <a class="btn primary" href="https://stats.googlesnakemods.com/">FastSnakeStats</a>
+            <a class="btn primary" href="https://stats.googlesnakemods.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg><span>See the stats<small>Speedrun leaderboards</small></span></a>
           </div>
         </article>
       </div>
@@ -191,30 +253,59 @@
 
     (function () {
       var ua = navigator.userAgent, os = null;
+      // Games consoles and smart TVs that don't run Android have no app: the browser version is theirs.
+      var noApp = !/Android/i.test(ua) &&
+        /PlayStation|Xbox|Nintendo|Tizen|SMART-TV|SmartTV|Web0S|webOS|NetCast|VIDAA|Viera|Saphi|Roku|HbbTV/i.test(ua);
       if (/Android/i.test(ua)) os = "android";
+      else if (noApp) os = "console";
       else if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) os = "ios";
+      else if (/CrOS/.test(ua)) os = "chromeos";
       else if (/Windows/.test(ua)) os = "windows";
       else if (/Macintosh|Mac OS X/.test(ua)) os = "macos";
-      else if (/Linux|X11|CrOS/.test(ua)) os = "linux";
+      else if (/Linux|X11/.test(ua)) os = "linux";
       if (!os) return;
 
-      var names = { android: "Android", ios: "iPhone and iPad", windows: "Windows", macos: "macOS", linux: "Linux" };
+      var names = { android: "Android", ios: "iPhone and iPad", chromeos: "Chromebooks", console: "this device", windows: "Windows", macos: "macOS", linux: "Linux" };
       var apps = {
-        tv: { site: "https://tv.yarmiplay.com/", android: "YarmiplayTV.apk", windows: "https://apps.microsoft.com/detail/9PDBVR6W069J", macos: "YarmiplayTV.dmg", linux: "YarmiplayTV.deb" },
-        servertv: { site: "https://servertv.yarmiplay.com/", windows: "https://apps.microsoft.com/detail/9P6B9C1KXFFQ", macos: "YarmiplayServerTV.dmg", linux: "YarmiplayServerTV.deb" }
+        tv: {
+          site: "https://tv.yarmiplay.com/",
+          android: ["YarmiplayTV.apk", "Android APK"],
+          windows: ["https://apps.microsoft.com/detail/9PDBVR6W069J", "Microsoft Store"],
+          macos: ["YarmiplayTV.dmg", "Disk image (.dmg)"],
+          linux: ["YarmiplayTV.deb", "Debian / Ubuntu (.deb)"]
+        },
+        servertv: {
+          site: "https://servertv.yarmiplay.com/",
+          windows: ["https://apps.microsoft.com/detail/9P6B9C1KXFFQ", "Microsoft Store"],
+          macos: ["YarmiplayServerTV.dmg", "Disk image (.dmg)"],
+          linux: ["YarmiplayServerTV.deb", "Debian / Ubuntu (.deb)"]
+        }
       };
 
       document.querySelectorAll("[data-download]").forEach(function (link) {
         var app = apps[link.getAttribute("data-download")], file = app[os];
         if (file) {
-          link.href = new URL(file, app.site).href;
-          link.textContent = "Download for " + names[os];
+          link.href = new URL(file[0], app.site).href;
+          link.querySelector("b").textContent = "Download for " + names[os];
+          link.querySelector("small").textContent = file[1];
+          return;
+        }
+        // No app for this device: YarmiplayTV's browser version takes the main button's place.
+        var watch = link.parentNode.querySelector("[data-watch]");
+        if (watch) {
+          watch.classList.add("primary");
+          link.remove();
           return;
         }
         var off = document.createElement("span");
         off.className = "btn disabled";
         off.setAttribute("aria-disabled", "true");
-        off.textContent = "Not available for " + names[os];
+        var text = document.createElement("span");
+        text.textContent = "Not available for " + names[os];
+        var note = document.createElement("small");
+        note.textContent = link.querySelector("small").textContent;
+        text.appendChild(note);
+        off.appendChild(text);
         link.replaceWith(off);
       });
     })();
